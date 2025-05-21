@@ -139,3 +139,7 @@ La aplicación permite:
 |Estado | ENUM('Pendiente','Completada')| Estado actual de la tarea|
 |FechaCreacion | DATETIME | Fecha en que se creó la tarea | 
 |FechaLimite | DATETIME |Fecha límite o de vencimiento de la tarea |
+
+---
+## 🔍Repositorio del Proyecto
+https://github.com/JHX333/Gestor-de-tareas-personales.git
