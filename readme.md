@@ -145,7 +145,7 @@ La aplicación permite:
 https://github.com/JHX333/Gestor-de-tareas-personales.git
 
 ## INSTRUCCIONES DE INSTALACION
-#### 1.-Descargar e instalar XAMPP: 
+#### 1.-Descargar e instalar XAMPP: https://www.apachefriends.org/es/index.html
 #### 2.-Una vez instalado el XAMPP, Ingresamos al XAMPP control panel 
 ![image](https://github.com/user-attachments/assets/dfe0bb14-9bd5-4518-b429-5b74289c4c32)
 
@@ -176,13 +176,9 @@ En donde esta 443 lo cambiaremos por 1443, también de igual forma en la siguien
 
 Después de esos cambios podemos cerrar la nota.
 
-#### 6.-En MySql vamos a ir a config-my.ini, después vamos a cambiar toda la nota por lo siguiente:
+#### 6.-En MySql el puerto predeterminado es el 3306, si en dado caso no te funciona cambialo por el 3307 como se muestra en el video tutorial adjunto a este repositorio
 
 ![image](https://github.com/user-attachments/assets/d095581b-3449-4c3e-8f45-44fbba87efb9)
-
-| # Example MySQL config file for small systems. # # This is for a system with little memory (<= 64M) where MySQL is only used # from time to time and it's important that the mysqld daemon # doesn't use much resources. # # You can copy this file to # C:/xampp/mysql/bin/my.cnf to set global options, # mysql-data-dir/my.cnf to set server-specific options (in this # installation this directory is C:/xampp/mysql/data) or # ~/.my.cnf to set user-specific options. # # In this file, you can use all long options that a program supports. # If you want to know which options a program supports, run the program # with the "--help" option. # The following options will be passed to all MySQL clients [client] # password       = your_password port=3306 socket="C:/xampp/mysql/mysql.sock" # Here follows entries for some specific programs # The MySQL server default-character-set=utf8mb4 [mysqld] port=3306 socket="C:/xampp/mysql/mysql.sock" basedir="C:/xampp/mysql" tmpdir="C:/xampp/tmp" datadir="C:/xampp/mysql/data" pid_file="mysql.pid" # enable-named-pipe key_buffer=16M max_allowed_packet=1M sort_buffer_size=512K net_buffer_length=8K read_buffer_size=256K read_rnd_buffer_size=512K myisam_sort_buffer_size=8M log_error="mysql_error.log" # Change here for bind listening # bind-address="127.0.0.1" # bind-address = ::1          # for ipv6 # Where do all the plugins live plugin_dir="C:/xampp/mysql/lib/plugin/" # Don't listen on a TCP/IP port at all. This can be a security enhancement, # if all processes that need to connect to mysqld run on the same host. # All interaction with mysqld must be made via Unix sockets or named pipes. # Note that using this option without enabling named pipes on Windows # (via the "enable-named-pipe" option) will render mysqld useless! # # commented in by lampp security #skip-networking #skip-federated # Replication Master Server (default) # binary logging is required for replication # log-bin deactivated by default since XAMPP 1.4.11 #log-bin=mysql-bin # required unique id between 1 and 2^32 - 1 # defaults to 1 if master-host is not set # but will not function as a master if omitted server-id	=1 # Replication Slave (comment out master section to use this) # # To configure this host as a replication slave, you can choose between # two methods : # # 1) Use the CHANGE MASTER TO command (fully described in our manual) - #    the syntax is: # #    CHANGE MASTER TO MASTER_HOST=<host>, MASTER_PORT=<port>, #    MASTER_USER=<user>, MASTER_PASSWORD=<password> ; # #    where you replace <host>, <user>, <password> by quoted strings and #    <port> by the master's port number (3306 by default). # #    Example: # #    CHANGE MASTER TO MASTER_HOST='125.564.12.1', MASTER_PORT=3306, #    MASTER_USER='joe', MASTER_PASSWORD='secret'; # # OR # # 2) Set the variables below. However, in case you choose this method, then #    start replication for the first time (even unsuccessfully, for example #    if you mistyped the password in master-password and the slave fails to #    connect), the slave will create a master.info file, and any later #    change in this file to the variables' values below will be ignored and #    overridden by the content of the master.info file, unless you shutdown #    the slave server, delete master.info and restart the slaver server. #    For that reason, you may want to leave the lines below untouched #    (commented) and instead use CHANGE MASTER TO (see above) # # required unique id between 2 and 2^32 - 1 # (and different from the master) # defaults to 2 if master-host is set # but will not function as a slave if omitted #server-id       = 2 # # The replication master for this slave - required #master-host     =   <hostname> # # The username the slave will use for authentication when connecting # to the master - required #master-user     =   <username> # # The password the slave will authenticate with when connecting to # the master - required #master-password =   <password> # # The port the master is listening on. # optional - defaults to 3306 #master-port     =  <port> # # binary logging - not required for slaves, but recommended #log-bin=mysql-bin # Point the following paths to different dedicated disks #tmpdir = "C:/xampp/tmp" #log-update = /path-to-dedicated-directory/hostname # Uncomment the following if you are using BDB tables #bdb_cache_size = 4M #bdb_max_lock = 10000 # Comment the following if you are using InnoDB tables #skip-innodb innodb_data_home_dir="C:/xampp/mysql/data" innodb_data_file_path=ibdata1:10M:autoextend innodb_log_group_home_dir="C:/xampp/mysql/data" #innodb_log_arch_dir = "C:/xampp/mysql/data" ## You can set .._buffer_pool_size up to 50 - 80 % ## of RAM but beware of setting memory usage too high innodb_buffer_pool_size=16M ## Set .._log_file_size to 25 % of buffer pool size innodb_log_file_size=5M innodb_log_buffer_size=8M innodb_flush_log_at_trx_commit=1 innodb_lock_wait_timeout=50 ## UTF 8 Settings #init-connect=\'SET NAMES utf8\' #collation_server=utf8_unicode_ci #character_set_server=utf8 #skip-character-set-client-handshake #character_sets-dir="C:/xampp/mysql/share/charsets" sql_mode=NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_ENGINE_SUBSTITUTION log_bin_trust_function_creators=1 character-set-server=utf8mb4 collation-server=utf8mb4_general_ci [mysqldump] max_allowed_packet=16M [mysql] # Remove the next comment character if you are not familiar with SQL #safe-updates [isamchk] key_buffer=20M sort_buffer_size=20M read_buffer=2M write_buffer=2M [myisamchk] key_buffer=20M sort_buffer_size=20M read_buffer=2M write_buffer=2M [mysqlhotcopy] |
-
-#### Después de ingresar el código de arriba en la nota sin los signos " | " que estan al inicio y al final, ya la podemos cerrar, prácticamente con el código de la tabla de arriba cambiamos el puerto por el 3306
 
 #### 7.-Iniciar (start) los puertos de Apache y Mysql
 
@@ -196,9 +192,9 @@ Después de esos cambios podemos cerrar la nota.
 -PHP Namespace Resolver
 -PHPUnit
 
-#### 10.-Descargar los archivos del siguiente repositorio: https://github.com/JHX333/Gestor-de-tareas-personales
+#### 10.-Descargar la carpeta login que se encuentra en este repositorio: https://github.com/JHX333/Gestor-de-tareas-personales
 
-#### 11.-Una vez descargados esos archivos, tenemos que colocarlos dentro de una carpeta llamada login
+#### 11.-Si descargamos la carpeta en zip, la tenemos que extraer hasta que nos deje simplemente la carpeta
 
 #### 12.-La carpeta login la vamos a colocar en la siguiente ruta: C:\xampp\htdocs
 
@@ -229,6 +225,8 @@ Correo varchar(150) NOT null UNIQUE,
 Password varchar(150) NOT null
 )
 ```
+![image](https://github.com/user-attachments/assets/75e1f828-3055-4614-a014-8374a9e108b7)
+
 #### 19.-Abrimos visual studio code, después nos dirigimos a la ruta C:\xampp\htdocs y arrastramos la carpeta login al visual studio code
 
 ![image](https://github.com/user-attachments/assets/de300f4d-180e-43d1-9e1b-c2d0c344d5bd)
@@ -248,4 +246,52 @@ Password varchar(150) NOT null
 #### 23.-Iniciamos sesión con el usuario que acabamos de agregar.
 
 ![image](https://github.com/user-attachments/assets/25201fad-a1e9-4e18-a0aa-89ce31445d88)
+
+#### 24.-Luego volvemos a phpmyadmin y en la base de datos login creamos una nueva tabla llamada tareas con el siguiente codigo:
+ ```sql
+CREATE TABLE tareas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT NOT NULL,
+    titulo VARCHAR(255) NOT NULL,
+    descripcion TEXT,
+    prioridad ENUM('Alta', 'Media', 'Baja'),
+    completada BOOLEAN DEFAULT 0,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);
+```
+![image](https://github.com/user-attachments/assets/e4fcf378-d843-4c9e-8aa3-90503756b0a1)
+
+![image](https://github.com/user-attachments/assets/0080835c-424b-4dad-b100-974f494e9922)
+
+#### 25.-Ya iniciada la sesion, nos aparecera la siguiente pagina:
+
+![image](https://github.com/user-attachments/assets/c054ff0a-250e-41ce-99a6-f8ebda6dc2bc)
+
+Simplemente le damos click al boton de Agregar tareas.
+
+#### 26.-Despues de entrar en la pagina de agregar tareas, nos aparecerá de la siguiente forma:
+
+![image](https://github.com/user-attachments/assets/5ec1817c-1d55-40b4-b4a6-1a7886d7377f)
+
+Aqui en mi caso yo ya tenia tareas guardadas que e terminado con este usuario.
+
+#### 27.-Lo unico que tenemos que hacer es crear una tarea nueva, agregamos el titulo, descripcion, prioridad y crear
+
+![image](https://github.com/user-attachments/assets/d54a049c-71e7-49fe-85c1-9c85bd30cd0e)
+
+#### 28.-Una vez creada la tarea, podemos observar que nos lanza un mensaje del localhost de xampp:
+
+![image](https://github.com/user-attachments/assets/85347ab0-a666-40f4-bd35-d1cdbad6bef0)
+
+Esto quiere decir que al recargar la pagina, al cerrar sesion y volver entrar con el usuario la tarea seguira ahi, ya que se almaceno con exito en la tabla tareas de nuestra base de datos login con el usuario especifico y relacionado que la creo.
+
+#### 29.-Podemos cerrar sesion para que nadie pueda ver nuestras tareas personales o bien registrar un nuevo usuario e iniciar sesion en nuestro gestor de tareas personales:
+
+![image](https://github.com/user-attachments/assets/638330c3-7481-4786-80a2-812b87c59ea9)
+![image](https://github.com/user-attachments/assets/4ed2711a-1678-4001-8ad4-1e8efc03238a)
+
+
+
+
+
 
