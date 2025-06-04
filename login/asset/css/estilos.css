@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.fondo{
+    
+   
+    background: rgb(2, 98, 136);
+}
+.fondo_menu{
+    background-color: rgb(2, 98, 136);
+  
+}
+.boton{
+    color: white;
+    border: 1px solid white;
+    margin-left: 15px;
+    text-decoration: none;
+    padding: 6px 8px;
+    border-radius: 8px;
+    transition: .2s;
+}
+.boton:hover{
+    border: 1px solid gray;
+    color: gray;
+}
+.fondo-login{
+    background-color: rgb(2, 98, 136);
+    min-height: 100vh;
+    padding-top: 50px;
+}
+.login{
+    color: white;
+    margin: auto;
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: rgb(51, 47, 47);
+}
+.icon, .titulo{
+    text-align: center;
+    color: white;
+}
+.titulo{
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+.icon .dog-icon{
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: white;
+}
+.box-eye{
+    position: relative;
+}
+.box-eye button{
+    border: none;
+    position: absolute;
+}
+.changePassword{
+    position: absolute;
+    top: 12px;
+    left: 270px;
+    color: rgb(51, 47, 47);
+    cursor: pointer;
+}
+.sub{
+    text-align: center;
+    padding-bottom: 10px;
+    color: white;
+}
+.arriba{
+    text-align: center;
+    padding-bottom: 50px;
+    color: white;
+    font-size: 40px;
+}
+#icono{
+    color:black;
+    font-size: 150px;
+}
+.registro{
+    font-size: 40px;
+    text-align: center;
+    color:white;
+    padding-bottom: 50px;
+}
+.saludo{
+    text-align: center;
+    
+    color: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carousel {
+  width: 100%;
+  max-width: 720px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slideAnimation 12s infinite;
+}
+
+.slide {
+  width: 100.0%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.caption {
+
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  font-size: 50px;
+  color: white;
+  text-shadow: -1px -1px  black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
+.text-bien {
+  text-align: center;
+    color: white;
+    font-size: 30px;
+ }
+
+@keyframes slideAnimation {
+  0% {margin-left: 0;}
+  30% {margin-left: 0;}
+
+  35% {margin-left: -100%;}
+  
+  70% {margin-left: -100%;}
+  75% {margin-left: -200%;}
+
+  100% {margin-left: -200%;}
+
+  
+  
+}
+
+.nav-link{
+    color: white;
+}
+.contenedor-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn-central {
+    background-color: #007bff; /* azul */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-central:hover {
+    background-color: #0056b3;
+}
+P{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+.fondopanel{
+    background-color: rgb(2, 98, 136);
+}
